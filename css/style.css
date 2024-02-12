@@ -170,7 +170,7 @@ p {
     inset: 0;
     position: absolute;
     content: "";
-    background: url(../images/Group\ 2772.png) no-repeat center;
+    background: url(../images/Group-2772.webp) no-repeat center;
     background-size: cover;
     opacity: .25;
 
@@ -360,21 +360,24 @@ p {
     transition: all .3s;
 }
 
-.navbar.scrolled .dark-logo {
+.navbar.scrolled .dark-logo,
+body.menu-open .navbar .dark-logo {
     opacity: 1;
 }
 
+body.menu-open .navbar,
 .navbar.scrolled {
     background-color: #e0e0e0 !important;
 }
 
 .navbar.scrolled .nav-item .nav-link:not(.contact),
-.navbar.scrolled .nav-item .nav-link:not(.contact):hover {
+.navbar.scrolled .nav-item .nav-link:not(.contact):hover,
+body.menu-open .navbar .nav-item .nav-link:not(.contact) {
 
     color: #1f187b;
 }
 
-.navbar .submenu .nav-link{
+.navbar .submenu .nav-link {
     color: #1f187b;
 }
 
@@ -651,7 +654,7 @@ p {
     position: absolute;
     content: "";
     inset: 0;
-    background: url(../images/thisisengineering-raeng-8hgmG03spF4-unsplash.png) no-repeat center;
+    background: url(../images/thisisengineering-raeng-8hgmG03spF4-unsplash.webp) no-repeat center;
     background-size: cover;
     opacity: .15;
 }
@@ -1364,6 +1367,10 @@ footer {
         outline: none !important;
     }
 
+    body.menu-open .navbar-toggler-icon {
+        background: url(../images/xmark-solid.svg) no-repeat center;
+    }
+
     .navbar .nav-item .submenu {
         visibility: visible;
         opacity: 1;
@@ -1371,23 +1378,27 @@ footer {
         display: none;
         transition: none;
         background-color: transparent;
-        padding-left: 30px;
     }
 
     .navbar .nav-item {
         flex-direction: column;
-        align-items: flex-start;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 40px;
     }
 
     .navbar-toggler-icon {
         background: url(../images/hamburger.svg) no-repeat center;
         background-size: contain;
         width: 34px;
-        height: 20px;
+        height: 26px;
     }
 
     .navbar.scrolled .navbar-toggler-icon,
-    .navbar.scrolled .search {
+    .navbar.scrolled .search,
+    body.menu-open .navbar .navbar-toggler-icon,
+    body.menu-open .navbar .search {
         filter: brightness(0) saturate(100%) invert(17%) sepia(81%) saturate(1373%) hue-rotate(225deg) brightness(96%) contrast(104%);
     }
 

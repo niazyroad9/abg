@@ -11,8 +11,13 @@ $(document).ready(function () {
             e.preventDefault();
             let submenu = $(this).siblings('.submenu')
             submenu.slideToggle()
+           
         })
     }
+
+    $('.navbar-toggler').on('click',function(){
+        $('body').toggleClass('menu-open')
+    })
 
 
 
