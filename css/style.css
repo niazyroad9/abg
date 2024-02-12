@@ -166,12 +166,11 @@ p {
     overflow: hidden;
 }
 
-.header-home .img-cont::after {
+.header-home .img-cont .inner-img {
     inset: 0;
     position: absolute;
-    content: "";
-    background: url(../images/Group-2772.webp) no-repeat center;
-    background-size: cover;
+   
+    background-size: cover !important;
     opacity: .25;
 
 }
